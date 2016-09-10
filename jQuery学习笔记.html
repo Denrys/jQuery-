@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>jQuery学习笔记.html</title>
+  <meta name="generator" content="Haroopad 0.13.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>div.oembedall-githubrepos{border:1px solid #DDD;border-radius:4px;list-style-type:none;margin:0 0 10px;padding:8px 10px 0;font:13.34px/1.4 helvetica,arial,freesans,clean,sans-serif;width:452px;background-color:#fff}div.oembedall-githubrepos .oembedall-body{background:-moz-linear-gradient(center top,#FAFAFA,#EFEFEF);background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#EFEFEF));border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top:1px solid #EEE;margin-left:-10px;margin-top:8px;padding:5px 10px;width:100%}div.oembedall-githubrepos h3{font-size:14px;margin:0;padding-left:18px;white-space:nowrap}div.oembedall-githubrepos p.oembedall-description{color:#444;font-size:12px;margin:0 0 3px}div.oembedall-githubrepos p.oembedall-updated-at{color:#888;font-size:11px;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats{border:none;float:right;font-size:11px;font-weight:700;padding-left:15px;position:relative;z-index:5;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats li{border:none;color:#666;display:inline-block;list-style-type:none;margin:0!important}div.oembedall-githubrepos ul.oembedall-repo-stats li a{background-color:transparent;border:none;color:#666!important;background-position:5px -2px;background-repeat:no-repeat;border-left:1px solid #DDD;display:inline-block;height:21px;line-height:21px;padding:0 5px 0 23px}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a{border-left:medium none;margin-right:-3px}div.oembedall-githubrepos ul.oembedall-repo-stats li a:hover{background:5px -27px no-repeat #4183C4;color:#FFF!important;text-decoration:none}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a:hover{border-bottom-left-radius:3px;border-top-left-radius:3px}ul.oembedall-repo-stats li:last-child a:hover{border-bottom-right-radius:3px;border-top-right-radius:3px}span.oembedall-closehide{background-color:#aaa;border-radius:2px;cursor:pointer;margin-right:3px}div.oembedall-container{margin-top:5px;text-align:left}.oembedall-ljuser{font-weight:700}.oembedall-ljuser img{vertical-align:bottom;border:0;padding-right:1px}.oembedall-stoqembed{border-bottom:1px dotted #999;float:left;overflow:hidden;width:730px;line-height:1;background:#FFF;color:#000;font-family:Arial,Liberation Sans,DejaVu Sans,sans-serif;font-size:80%;text-align:left;margin:0;padding:0}.oembedall-stoqembed a{color:#07C;text-decoration:none;margin:0;padding:0}.oembedall-stoqembed a:hover{text-decoration:underline}.oembedall-stoqembed a:visited{color:#4A6B82}.oembedall-stoqembed h3{font-family:Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;font-size:130%;font-weight:700;margin:0;padding:0}.oembedall-stoqembed .oembedall-reputation-score{color:#444;font-size:120%;font-weight:700;margin-right:2px}.oembedall-stoqembed .oembedall-user-info{height:35px;width:185px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-gravatar32{float:left;height:32px;width:32px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-details{float:left;margin-left:5px;overflow:hidden;white-space:nowrap;width:145px}.oembedall-stoqembed .oembedall-question-hyperlink{font-weight:700}.oembedall-stoqembed .oembedall-stats{background:#EEE;margin:0 0 0 7px;padding:4px 7px 6px;width:58px}.oembedall-stoqembed .oembedall-statscontainer{float:left;margin-right:8px;width:86px}.oembedall-stoqembed .oembedall-votes{color:#555;padding:0 0 7px;text-align:center}.oembedall-stoqembed .oembedall-vote-count-post{font-size:240%;color:#808185;display:block;font-weight:700}.oembedall-stoqembed .oembedall-views{color:#999;padding-top:4px;text-align:center}.oembedall-stoqembed .oembedall-status{margin-top:-3px;padding:4px 0;text-align:center;background:#75845C;color:#FFF}.oembedall-stoqembed .oembedall-status strong{color:#FFF;display:block;font-size:140%}.oembedall-stoqembed .oembedall-summary{float:left;width:635px}.oembedall-stoqembed .oembedall-excerpt{line-height:1.2;margin:0;padding:0 0 5px}.oembedall-stoqembed .oembedall-tags{float:left;line-height:18px}.oembedall-stoqembed .oembedall-tags a:hover{text-decoration:none}.oembedall-stoqembed .oembedall-post-tag{background-color:#E0EAF1;border-bottom:1px solid #3E6D8E;border-right:1px solid #7F9FB6;color:#3E6D8E;font-size:90%;line-height:2.4;margin:2px 2px 2px 0;padding:3px 4px;text-decoration:none;white-space:nowrap}.oembedall-stoqembed .oembedall-post-tag:hover{background-color:#3E6D8E;border-bottom:1px solid #37607D;border-right:1px solid #37607D;color:#E0EAF1}.oembedall-stoqembed .oembedall-fr{float:right}.oembedall-stoqembed .oembedall-statsarrow{background-image:url(http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=3);background-repeat:no-repeat;overflow:hidden;background-position:0 -435px;float:right;height:13px;margin-top:12px;width:7px}.oembedall-facebook1{border:1px solid #1A3C6C;padding:0;font:13.34px/1.4 verdana;width:500px}.oembedall-facebook2{background-color:#627add}.oembedall-facebook2 a{color:#e8e8e8;text-decoration:none}.oembedall-facebookBody{background-color:#fff;vertical-align:top;padding:5px}.oembedall-facebookBody .contents{display:inline-block;width:100%}.oembedall-facebookBody div img{float:left;margin-right:5px}div.oembedall-lanyard{-webkit-box-shadow:none;-webkit-transition-delay:0s;-webkit-transition-duration:.4000000059604645s;-webkit-transition-property:width;-webkit-transition-timing-function:cubic-bezier(0.42,0,.58,1);background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;border-width:0;box-shadow:none;color:#112644;display:block;float:left;font-family:'Trebuchet MS',Trebuchet,sans-serif;font-size:16px;height:253px;line-height:19px;margin:0;max-width:none;min-height:0;outline:#112644 0;overflow-x:visible;overflow-y:visible;padding:0;position:relative;text-align:left;vertical-align:baseline;width:804px}div.oembedall-lanyard .tagline{font-size:1.5em}div.oembedall-lanyard .wrapper{overflow:hidden;clear:both}div.oembedall-lanyard .split{float:left;display:inline}div.oembedall-lanyard .prominent-place .flag:active,div.oembedall-lanyard .prominent-place .flag:focus,div.oembedall-lanyard .prominent-place .flag:hover,div.oembedall-lanyard .prominent-place .flag:link,div.oembedall-lanyard .prominent-place .flag:visited{float:left;display:block;width:48px;height:48px;position:relative;top:-5px;margin-right:10px}div.oembedall-lanyard .place-context{font-size:.889em}div.oembedall-lanyard .prominent-place .sub-place{display:block}div.oembedall-lanyard .prominent-place{font-size:1.125em;line-height:1.1em;font-weight:400}div.oembedall-lanyard .main-date{color:#8CB4E0;font-weight:700;line-height:1.1}div.oembedall-lanyard .first{width:48.57%;margin:0 0 0 2.857%}.mermaid .label{color:#333}.node circle,.node polygon,.node rect{fill:#cde498;stroke:#13540c;stroke-width:1px}.edgePath .path{stroke:green;stroke-width:1.5px}.cluster rect{fill:#cdffb2;rx:40;stroke:#6eaa49;stroke-width:1px}.cluster text{fill:#333}.actor{stroke:#13540c;fill:#cde498}text.actor{fill:#000;stroke:none}.actor-line{stroke:grey}.messageLine0{stroke-width:1.5;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#333}.messageLine1{stroke-width:1.5;stroke-dasharray:"2 2";stroke:#333}#arrowhead{fill:#333}#crosshead path{fill:#333!important;stroke:#333!important}.messageText{fill:#333;stroke:none}.labelBox{stroke:#326932;fill:#cde498}.labelText,.loopText{fill:#000;stroke:none}.loopLine{stroke-width:2;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#326932}.note{stroke:#6eaa49;fill:#fff5ad}.noteText{fill:#000;stroke:none;font-family:'trebuchet ms',verdana,arial;font-size:14px}.section{stroke:none;opacity:.2}.section0,.section2{fill:#6eaa49}.section1,.section3{fill:#fff;opacity:.2}.sectionTitle0,.sectionTitle1,.sectionTitle2,.sectionTitle3{fill:#333}.sectionTitle{text-anchor:start;font-size:11px;text-height:14px}.grid .tick{stroke:lightgrey;opacity:.3;shape-rendering:crispEdges}.grid path{stroke-width:0}.today{fill:none;stroke:red;stroke-width:2px}.task{stroke-width:2}.taskText{text-anchor:middle;font-size:11px}.taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px}.taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}.taskText0,.taskText1,.taskText2,.taskText3{fill:#fff}.task0,.task1,.task2,.task3{fill:#487e3a;stroke:#13540c}.taskTextOutside0,.taskTextOutside1,.taskTextOutside2,.taskTextOutside3{fill:#000}.active0,.active1,.active2,.active3{fill:#cde498;stroke:#13540c}.activeText0,.activeText1,.activeText2,.activeText3{fill:#000!important}.done0,.done1,.done2,.done3{stroke:grey;fill:lightgrey;stroke-width:2}.doneText0,.doneText1,.doneText2,.doneText3{fill:#000!important}.crit0,.crit1,.crit2,.crit3{stroke:#f88;fill:red;stroke-width:2}.activeCrit0,.activeCrit1,.activeCrit2,.activeCrit3{stroke:#f88;fill:#cde498;stroke-width:2}.doneCrit0,.doneCrit1,.doneCrit2,.doneCrit3{stroke:#f88;fill:lightgrey;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}.activeCritText0,.activeCritText1,.activeCritText2,.activeCritText3,.doneCritText0,.doneCritText1,.doneCritText2,.doneCritText3{fill:#000!important}.titleText{text-anchor:middle;font-size:18px;fill:#000}text{font-family:'trebuchet ms',verdana,arial;font-size:14px}html{height:100%}body{margin:0!important;padding:5px 20px 26px!important;background-color:#fff;font-family:"Lucida Grande","Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Lucida Sans Unicode",Helvetica,Arial,sans-serif;font-size:.9em;overflow-x:hidden;overflow-y:auto}br,h1,h2,h3,h4,h5,h6{clear:both}hr.page{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x;border:0;height:3px;padding:0}hr.underscore{border-top-style:dashed!important}body >:first-child{margin-top:0!important}img.plugin{box-shadow:0 1px 3px rgba(0,0,0,.1);border-radius:3px}iframe{border:0}figure{-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}kbd{border:1px solid #aaa;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-moz-box-shadow:1px 2px 2px #ddd;-webkit-box-shadow:1px 2px 2px #ddd;box-shadow:1px 2px 2px #ddd;background-color:#f9f9f9;background-image:-moz-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-o-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-webkit-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:linear-gradient(top,#eee,#f9f9f9,#eee);padding:1px 3px;font-family:inherit;font-size:.85em}.oembeded .oembed_photo{display:inline-block}img[data-echo]{margin:25px 0;width:100px;height:100px;background:url(../img/ajax.gif) center center no-repeat #fff}.spinner{display:inline-block;width:10px;height:10px;margin-bottom:-.1em;border:2px solid rgba(0,0,0,.5);border-top-color:transparent;border-radius:100%;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}.spinner:after{content:'';display:block;width:0;height:0;position:absolute;top:-6px;left:0;border:4px solid transparent;border-bottom-color:rgba(0,0,0,.5);-webkit-transform:rotate(45deg);transform:rotate(45deg)}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}@keyframes spin{to{transform:rotate(360deg)}}p.toc{margin:0!important}p.toc ul{padding-left:10px}p.toc>ul{padding:10px;margin:0 10px;display:inline-block;border:1px solid #ededed;border-radius:5px}p.toc li,p.toc ul{list-style-type:none}p.toc li{width:100%;padding:0;overflow:hidden}p.toc li a::after{content:"."}p.toc li a:before{content:"• "}p.toc h5{text-transform:uppercase}p.toc .title{float:left;padding-right:3px}p.toc .number{margin:0;float:right;padding-left:3px;background:#fff;display:none}input.task-list-item{margin-left:-1.62em}.markdown{font-family:"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;padding:20px}.markdown a{text-decoration:none;vertical-align:baseline}.markdown a:hover{text-decoration:underline}.markdown h1{font-size:2.2em;font-weight:700;margin:1.5em 0 1em}.markdown h2{font-size:1.8em;font-weight:700;margin:1.275em 0 .85em}.markdown h3{font-size:1.6em;font-weight:700;margin:1.125em 0 .75em}.markdown h4{font-size:1.4em;font-weight:700;margin:.99em 0 .66em}.markdown h5{font-size:1.2em;font-weight:700;margin:.855em 0 .57em}.markdown h6{font-size:1em;font-weight:700;margin:.75em 0 .5em}.markdown h1+p,.markdown h1:first-child,.markdown h2+p,.markdown h2:first-child,.markdown h3+p,.markdown h3:first-child,.markdown h4+p,.markdown h4:first-child,.markdown h5+p,.markdown h5:first-child,.markdown h6+p,.markdown h6:first-child{margin-top:0}.markdown hr{border:1px solid #ccc}.markdown p{margin:1em 0;word-wrap:break-word}.markdown ol{list-style-type:decimal}.markdown li{display:list-item;line-height:1.4em}.markdown blockquote{margin:1em 20px}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown blockquote cite:before{content:'\2014 \00A0'}.markdown .code{border-radius:3px;word-wrap:break-word}.markdown pre{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;overflow:auto;padding:.5em}.markdown pre code{border:0;display:block}.markdown pre>code{font-family:Consolas,Inconsolata,Courier,monospace;font-weight:700;white-space:pre;margin:0}.markdown code{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;padding:0 5px;margin:0 2px}.markdown img{max-width:100%}.markdown mark{color:#000;background-color:#fcf8e3}.markdown table{padding:0;border-collapse:collapse;border-spacing:0;margin-bottom:16px}.markdown table tr td,.markdown table tr th{border:1px solid #ccc;margin:0;padding:6px 13px}.markdown table tr th{font-weight:700}.markdown table tr th>:first-child{margin-top:0}.markdown table tr th>:last-child{margin-bottom:0}.markdown table tr td>:first-child{margin-top:0}.markdown table tr td>:last-child{margin-bottom:0}@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);.haroopad{padding:20px;color:#222;font-size:15px;font-family:"Roboto Condensed",Tauri,"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}.haroopad a{color:#3269a0}.haroopad a:hover{color:#4183c4}.haroopad h2{border-bottom:1px solid #e6e6e6}.haroopad h6{color:#777}.haroopad hr{border:1px solid #e6e6e6}.haroopad blockquote>code,.haroopad h1>code,.haroopad h2>code,.haroopad h3>code,.haroopad h4>code,.haroopad h5>code,.haroopad h6>code,.haroopad li>code,.haroopad p>code,.haroopad td>code{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:85%;background-color:rgba(0,0,0,.02);padding:.2em .5em;border:1px solid #efefef}.haroopad pre>code{font-size:1em;letter-spacing:-1px;font-weight:700}.haroopad blockquote{border-left:4px solid #e6e6e6;padding:0 15px;color:#777}.haroopad table{background-color:#fafafa}.haroopad table tr td,.haroopad table tr th{border:1px solid #e6e6e6}.haroopad table tr:nth-child(2n){background-color:#f2f2f2}.hljs{display:block;overflow-x:auto;padding:.5em;background:#fdf6e3;color:#657b83;-webkit-text-size-adjust:none}.diff .hljs-header,.hljs-comment,.hljs-doctype,.hljs-javadoc,.hljs-pi,.lisp .hljs-string{color:#93a1a1}.css .hljs-tag,.hljs-addition,.hljs-keyword,.hljs-request,.hljs-status,.hljs-winutils,.method,.nginx .hljs-title{color:#859900}.hljs-command,.hljs-dartdoc,.hljs-hexcolor,.hljs-link_url,.hljs-number,.hljs-phpdoc,.hljs-regexp,.hljs-rules .hljs-value,.hljs-string,.hljs-tag .hljs-value,.tex .hljs-formula{color:#2aa198}.css .hljs-function,.hljs-built_in,.hljs-chunk,.hljs-decorator,.hljs-id,.hljs-identifier,.hljs-localvars,.hljs-title,.vhdl .hljs-literal{color:#268bd2}.hljs-attribute,.hljs-class .hljs-title,.hljs-constant,.hljs-link_reference,.hljs-parent,.hljs-type,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number{color:#b58900}.css .hljs-pseudo,.diff .hljs-change,.hljs-attr_selector,.hljs-cdata,.hljs-header,.hljs-pragma,.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-shebang,.hljs-special,.hljs-subst,.hljs-symbol,.hljs-symbol .hljs-string{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#eee8d5}.MathJax_Hover_Frame{border-radius:.25em;-webkit-border-radius:.25em;-moz-border-radius:.25em;-khtml-border-radius:.25em;box-shadow:0 0 15px #83A;-webkit-box-shadow:0 0 15px #83A;-moz-box-shadow:0 0 15px #83A;-khtml-box-shadow:0 0 15px #83A;border:1px solid #A6D!important;display:inline-block;position:absolute}.MathJax_Hover_Arrow{position:absolute;width:15px;height:11px;cursor:pointer}#MathJax_About{position:fixed;left:50%;width:auto;text-align:center;border:3px outset;padding:1em 2em;background-color:#DDD;color:#000;cursor:default;font-family:message-box;font-size:120%;font-style:normal;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-khtml-border-radius:15px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_Menu{position:absolute;background-color:#fff;color:#000;width:auto;padding:5px 0;border:1px solid #CCC;margin:0;cursor:default;font:menu;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-khtml-border-radius:5px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_MenuItem{padding:1px 2em;background:0 0}.MathJax_MenuArrow{position:absolute;right:.5em;color:#666}.MathJax_MenuActive .MathJax_MenuArrow{color:#fff}.MathJax_MenuArrow.RTL{left:.5em;right:auto}.MathJax_MenuCheck{position:absolute;left:.7em}.MathJax_MenuCheck.RTL{right:.7em;left:auto}.MathJax_MenuRadioCheck{position:absolute;left:.7em}.MathJax_MenuRadioCheck.RTL{right:.7em;left:auto}.MathJax_MenuLabel{padding:1px 2em 3px 1.33em;font-style:italic}.MathJax_MenuRule{border-top:1px solid #DDD;margin:4px 3px}.MathJax_MenuDisabled{color:GrayText}.MathJax_MenuActive{background-color:#606872;color:#fff}.MathJax_Menu_Close{position:absolute;width:31px;height:31px;top:-15px;left:-15px}#MathJax_Zoom{position:absolute;background-color:#F0F0F0;overflow:auto;display:block;z-index:301;padding:.5em;border:1px solid #000;margin:0;font-weight:400;font-style:normal;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;box-shadow:5px 5px 15px #AAA;-webkit-box-shadow:5px 5px 15px #AAA;-moz-box-shadow:5px 5px 15px #AAA;-khtml-box-shadow:5px 5px 15px #AAA;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}#MathJax_ZoomOverlay{position:absolute;left:0;top:0;z-index:300;display:inline-block;width:100%;height:100%;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}#MathJax_ZoomFrame{position:relative;display:inline-block;height:0;width:0}#MathJax_ZoomEventTrap{position:absolute;left:0;top:0;z-index:302;display:inline-block;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}.MathJax_Preview{color:#888}#MathJax_Message{position:fixed;left:1px;bottom:2px;background-color:#E6E6E6;border:1px solid #959595;margin:0;padding:2px 8px;z-index:102;color:#000;font-size:80%;width:auto;white-space:nowrap}#MathJax_MSIE_Frame{position:absolute;top:0;left:0;width:0;z-index:101;border:0;margin:0;padding:0}.MathJax_Error{color:#C00;font-style:italic}footer{position:fixed;font-size:.8em;text-align:right;bottom:0;margin-left:-25px;height:20px;width:100%}</style>
+</head>
+<body class="markdown haroopad">
+<h2 id="jquery学习笔记"><a name="jquery学习笔记" href="#jquery学习笔记"></a>jQUery学习笔记</h2><ul>
+<li><p>$(document).ready(function(){});</p>
+<blockquote>
+<p>hide() 隐藏<br>show(100)  显示<br>toggle   替换hide()与show()来切换隐藏与显示<br>fadeIn()  淡入效果<br>fadeout()  淡出效果<br>fadeToggle()  切换淡入淡出<br>fadeTo(“slow”,0.15);  允许渐变为给定的不透明度（值介于 0 与 1 之间）<br>slideUp(“slow”);  向上滑动<br>slideDown（） 向下滑动<br>slideToggle()  切换滑动效果</p>
+</blockquote>
+</li><li><p>需要事先把div属性设置成为<code>position:absolute</code>;</p>
+<blockquote>
+<p>animate动画<br>animate({left:’250px’});</p>
+<pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>$(&quot;#p10&quot;).animate({
+             left:'250px',
+              opacity:'0.5',
+              // height:'150px',
+              // width:'150px'  +=增加大小
+             height:'+=150px',
+               width:'+=150px'});
+         });
+animate({height:'toggle'});
+队列动画
+$(document).ready(function(){
+$(&quot;button&quot;).click(function(){
+ var div=$(&quot;div&quot;);
+ div.animate({height:'300px',opacity:'0.4'},&quot;slow&quot;);
+ div.animate({width:'300px',opacity:'0.8'},&quot;slow&quot;);
+ div.animate({height:'100px',opacity:'0.4'},&quot;slow&quot;);
+ div.animate({width:'100px',opacity:'0.8'},&quot;slow&quot;);
+});
+});
+</code></pre>">$(<span class="hljs-string">"#p10"</span>).animate({
+             left:<span class="hljs-string">'250px'</span>,
+              opacity:<span class="hljs-string">'0.5'</span>,
+              <span class="hljs-comment">// height:'150px',</span>
+              <span class="hljs-comment">// width:'150px'  +=增加大小</span>
+             height:<span class="hljs-string">'+=150px'</span>,
+               width:<span class="hljs-string">'+=150px'</span>});
+         });
+animate({height:<span class="hljs-string">'toggle'</span>});
+队列动画
+$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+$(<span class="hljs-string">"button"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+ <span class="hljs-keyword">var</span> div=$(<span class="hljs-string">"div"</span>);
+ div.animate({height:<span class="hljs-string">'300px'</span>,opacity:<span class="hljs-string">'0.4'</span>},<span class="hljs-string">"slow"</span>);
+ div.animate({width:<span class="hljs-string">'300px'</span>,opacity:<span class="hljs-string">'0.8'</span>},<span class="hljs-string">"slow"</span>);
+ div.animate({height:<span class="hljs-string">'100px'</span>,opacity:<span class="hljs-string">'0.4'</span>},<span class="hljs-string">"slow"</span>);
+ div.animate({width:<span class="hljs-string">'100px'</span>,opacity:<span class="hljs-string">'0.8'</span>},<span class="hljs-string">"slow"</span>);
+});
+});
+</code></pre>
+</blockquote>
+</li></ul><blockquote>
+<p>stop();    按钮会停止当前活动的动画，但允许已排队的动画向前执行。<br>stop(true); “停止所有” 按钮停止当前活动的动画，并清空动画队列；因此元素上的所有动画都会停止。<br>stop(true,true);  “停止但要完成” 会立即完成当前活动的动画，然后停下来。</p>
+</blockquote><h1 id="callback-函数在当前动画-100%-完成之后执行。"><a name="callback-函数在当前动画-100%-完成之后执行。" href="#callback-函数在当前动画-100%-完成之后执行。"></a>Callback 函数在当前动画 100% 完成之后执行。</h1><h5 id="错误（没有-callback）"><a name="错误（没有-callback）" href="#错误（没有-callback）"></a>错误（没有 callback）</h5><p>$(“p”).hide(1000);<br>alert(“The paragraph is now hidden”);</p><h5 id="正确（有-callback）"><a name="正确（有-callback）" href="#正确（有-callback）"></a>正确（有 callback）</h5><p>$(“p”).hide(1000,function(){<br>alert(“The paragraph is now hidden”);<br>});</p><h4 id="jquery连接技术"><a name="jquery连接技术" href="#jquery连接技术"></a>jquery连接技术</h4><ul>
+<li>多种属性连接到一起<ul>
+<li>$(“#p13”).css(“color”,”red”).slideUp(2000).slideDown(2000);</li></ul>
+</li><li>获取id为test的输入框的值<ul>
+<li>alert(“Value: “ + $(“#test”).val());</li></ul>
+</li><li>获取id为test的文本<ul>
+<li>$(“#test”).text());</li></ul>
+</li><li>获取id为test的文本和html代码<ul>
+<li>$(“#test”).html());</li></ul>
+</li><li>获取id为w3s的href的值<ul>
+<li>$(“#w3s”).attr(“href”)</li></ul>
+</li><li>改变href的值<ul>
+<li>$(“#w3s”).attr(“href”,”<a href="http://www.w3school.com.cn/jquery">http://www.w3school.com.cn/jquery</a>“);</li></ul>
+</li></ul><h2 id="改变值，相当于innerhtml"><a name="改变值，相当于innerhtml" href="#改变值，相当于innerhtml"></a>改变值，相当于innerHTML</h2><blockquote>
+<p>.html()是用来读取元素的html内容（包括html标签），.text()用来读取元素的纯文本内容，包括其后代元素，.val()是用来读取表单元素的”value”值。其中.html()和.text()方法不能使用在表单元素上,而.val()只能使用在表单元素上<br>$(“#test1”).text(“Hello world!”);<br>$(“#test2”).html(“<b>Hello world!</b>“);<br>$(“#test3”).val(“Dolly Duck”);</p>
+</blockquote><h2 id="增加，删除内容"><a name="增加，删除内容" href="#增加，删除内容"></a>增加，删除内容</h2><blockquote>
+<p>$(“#p14”).append(“<b>后面增加新内容</b>“);<br>append()前面是要选择的对象，后面是要在对象内插入的元素内容<br>appendTo()前面是要插入的元素内容，而后面是要选择的对象</p>
+<pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>    $(&quot;.content&quot;).append('&amp;lt;div class=&quot;append&quot;&amp;gt;通过append方法添加的元素&amp;lt;/div&amp;gt;')
+    $('&amp;lt;div class=&quot;appendTo&quot;&amp;gt;通过appendTo方法添加的元素&amp;lt;/div&amp;gt;').appendTo($(&quot;.content&quot;))
+</code></pre>">    $(<span class="hljs-string">".content"</span>).append(<span class="hljs-string">'&lt;div class="append"&gt;通过append方法添加的元素&lt;/div&gt;'</span>)
+    $(<span class="hljs-string">'&lt;div class="appendTo"&gt;通过appendTo方法添加的元素&lt;/div&gt;'</span>).appendTo($(<span class="hljs-string">".content"</span>))
+</code></pre>
+<p>$(“#p14”).after(“<b>后面增加新内容</b>“);<br>prepend()向每个匹配的元素内部前置内容<br>prependTo()把所有匹配的元素前置到另一个指定的元素集合中</p>
+<pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;> $('&amp;lt;p&amp;gt;prependTo增加的p元素&amp;lt;/p&amp;gt;').prependTo($('.aaron2'))
+</code></pre>"> $(<span class="hljs-string">'&lt;p&gt;prependTo增加的p元素&lt;/p&gt;'</span>).prependTo($(<span class="hljs-string">'.aaron2'</span>))
+</code></pre>
+<p>通过empty移除了当前div元素下的所有p元素,但是本身的div元素没有被删除,通过empty方法移除里面div的所有元素，它只是清空内部的html代码，但是标记仍然留在DOM中<br>$(“div”).empty()<br>$(“#p14”).prepend(“<b>前面增加新内容</b>“);<br>$(“#p14”).before(“<b>前面增加新内容</b>“);<br>$(“#p14”).remove();   删除内容<br>remove会将元素自身移除，同时也会移除元素内部的一切，包括绑定的事件及与该元素相关的jQuery数据。DOM节点不存在了,同事事件也会被销毁<br>$(“p”).remove(“.p01”);//删除class为p01的元素节点<br>区别：empty不能删除自己本身这个节点  remove该节点与该节点所包含的所有后代节点将同时被删除</p>
+<h5 id="detach"><a name="detach" href="#detach"></a>detach</h5>
+<p>  这个方法不会把匹配的元素从jQuery对象中删除，因而可以在将来再使用这些匹配的元素。与remove()不同的是，所有绑定的事件、附加的数据等都会保留下来。<br>$(“p”).detach()</p>
+<p>$(“#addcss”).addClass(“fontclass”);   增加CSS<br>$(“#addcss”).rmoveClass(“fontclass”);  删除css<br>$(“#addcss”).toggleClass(“fontclass”);  切换css</p>
+</blockquote><p>$(this).clone().css   复制所有匹配的元素集合，包括所有匹配元素、匹配元素的下级元素、文字节点。</p><h5 id="替换并删除节点"><a name="替换并删除节点" href="#替换并删除节点"></a>替换并删除节点</h5><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;> $(&quot;.right &amp;gt; div:first p:eq(1)&quot;).replaceWith('&amp;lt;a style=&quot;color:red&quot;&amp;gt;replaceWith替换第二段的内容&amp;lt;/a&amp;gt;')
+ $('&amp;lt;a style=&quot;color:red&quot;&amp;gt;replaceAll替换第六段的内容&amp;lt;/a&amp;gt;').replaceAll('.right &amp;gt; div:last p:last');
+</code></pre>"> $(<span class="hljs-string">".right &gt; div:first p:eq(1)"</span>).replaceWith(<span class="hljs-string">'&lt;a style="color:red"&gt;replaceWith替换第二段的内容&lt;/a&gt;'</span>)
+ $(<span class="hljs-string">'&lt;a style="color:red"&gt;replaceAll替换第六段的内容&lt;/a&gt;'</span>).replaceAll(<span class="hljs-string">'.right &gt; div:last p:last'</span>);
+</code></pre><h3 id="dom包裹wrap()方法（创建父级元素）"><a name="dom包裹wrap()方法（创建父级元素）" href="#dom包裹wrap()方法（创建父级元素）"></a>DOM包裹wrap()方法（创建父级元素）</h3><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>创建父级元素（对于单个创建）
+一个p元素增加一个div包裹
+$('p').wrap('&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;')
+删除父级元素
+$('p').unwrap('&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;')
+所有p元素外部增加一个div包裹
+$('p').wrapAll('&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;');
+wrapInner方法给所有P元素增加内部父容器div
+$('p').wrapInner('&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;');
+</code></pre>">创建父级元素（对于单个创建）
+一个p元素增加一个div包裹
+$(<span class="hljs-string">'p'</span>).wrap(<span class="hljs-string">'&lt;div&gt;&lt;/div&gt;'</span>)
+删除父级元素
+$(<span class="hljs-string">'p'</span>).unwrap(<span class="hljs-string">'&lt;div&gt;&lt;/div&gt;'</span>)
+所有p元素外部增加一个div包裹
+$(<span class="hljs-string">'p'</span>).wrapAll(<span class="hljs-string">'&lt;div&gt;&lt;/div&gt;'</span>);
+wrapInner方法给所有P元素增加内部父容器div
+$(<span class="hljs-string">'p'</span>).wrapInner(<span class="hljs-string">'&lt;div&gt;&lt;/div&gt;'</span>);
+</code></pre><h3 id="更改css样式"><a name="更改css样式" href="#更改css样式"></a>更改CSS样式</h3><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>$(&quot;#color&quot;).css({&quot;background&quot;:&quot;red&quot;,&quot;font-size&quot;:&quot;30px&quot;}); 
+ $(&quot;#color&quot;).css(&quot;font-weight&quot;,&quot;bold&quot;);
+  $(&quot;#div3&quot;).width(320).height(320);    更改宽度高度
+  .css({
+            'font-size'        :&quot;15px&quot;,
+            &quot;background-color&quot; :&quot;#40E0D0&quot;,
+            &quot;border&quot;           :&quot;1px solid red&quot;
+        })
+add()将元素追加到匹配元素集合中
+        $('#demo1&quot;).add('#demo2&quot;);
+</code></pre>">$("#color").css({"background":"red","font-size":"30px"}); 
+ $("#color").css("font-weight","bold");
+  $("#div3").width(320).height(320);    更改宽度高度
+  .css({
+            'font-size'        :"15px",
+            "background-color" :"#40E0D0",
+            "border"           :"1px solid red"
+        })
+add()将元素追加到匹配元素集合中
+        $('#demo1").add('#demo2");
+</code></pre><h2 id="返回高度宽度"><a name="返回高度宽度" href="#返回高度宽度"></a>返回高度宽度</h2><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>  $(document).ready(function(){
+  $(&quot;#btn09&quot;).click(function(){
+    var txt=&quot;&quot;;
+    txt+=&quot;Width of div: &quot; + $(&quot;#div1&quot;).width() + &quot;&amp;lt;/br&amp;gt;&quot;;
+    txt+=&quot;Height of div: &quot; + $(&quot;#div1&quot;).height() + &quot;&amp;lt;/br&amp;gt;&quot;;
+    txt+=&quot;Inner width of div: &quot; + $(&quot;#div1&quot;).innerWidth() + &quot;&amp;lt;/br&amp;gt;&quot;;
+    txt+=&quot;Inner height of div: &quot; + $(&quot;#div1&quot;).innerHeight();
+
+    txt+=&quot;Outer width of div: &quot; + $(&quot;#div1&quot;).outerWidth() + &quot;&amp;lt;/br&amp;gt;&quot;;
+    txt+=&quot;Outer height of div: &quot; + $(&quot;#div1&quot;).outerHeight();
+
+    $(&quot;#div1&quot;).html(txt);
+  });
+});
+</code></pre>">  $(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+  $(<span class="hljs-string">"#btn09"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">var</span> txt=<span class="hljs-string">""</span>;
+    txt+=<span class="hljs-string">"Width of div: "</span> + $(<span class="hljs-string">"#div1"</span>).width() + <span class="hljs-string">"&lt;/br&gt;"</span>;
+    txt+=<span class="hljs-string">"Height of div: "</span> + $(<span class="hljs-string">"#div1"</span>).height() + <span class="hljs-string">"&lt;/br&gt;"</span>;
+    txt+=<span class="hljs-string">"Inner width of div: "</span> + $(<span class="hljs-string">"#div1"</span>).innerWidth() + <span class="hljs-string">"&lt;/br&gt;"</span>;
+    txt+=<span class="hljs-string">"Inner height of div: "</span> + $(<span class="hljs-string">"#div1"</span>).innerHeight();
+
+    txt+=<span class="hljs-string">"Outer width of div: "</span> + $(<span class="hljs-string">"#div1"</span>).outerWidth() + <span class="hljs-string">"&lt;/br&gt;"</span>;
+    txt+=<span class="hljs-string">"Outer height of div: "</span> + $(<span class="hljs-string">"#div1"</span>).outerHeight();
+
+    $(<span class="hljs-string">"#div1"</span>).html(txt);
+  });
+});
+</code></pre><blockquote>
+<p>innerWidth() - 返回元素的宽度（包括内边距）。<br>innerHeight() - 返回元素的高度（包括内边距）。<br>outerWidth() - 返回元素的宽度（包括内边距和边框）。<br>outerHeight() - 返回元素的高度（包括内边距和边框）。</p>
+</blockquote><h2 id="遍历"><a name="遍历" href="#遍历"></a>遍历</h2><blockquote>
+<p>$(“span”).parent().css({“color”:”red”,”border”:”2px solid red”});   定义直接直接父级元素的css样式<br>$(“span”).parents().css({“color”:”red”,”border”:”2px solid red”});   所有span元素的所有祖先<br>$(“div”).closet(“li’)首先从本身开始向上匹配，若匹配到符合要求的第一个，即停止匹配。<br>$(“span”).parentsUntil(“div”).css   定义两个元素之间的祖先<br>$(“div”).children().css({“color”:”red”,”border”:”2px solid red”});   定义div的孩子的css样式<br> $(“div”).children(“p.1”).css;   定义div中孩子p为class为1的样式<br> $(“div”).find(“span”).css  定义属于div后代的所有span元素：<br> $(“div”).find(“*”);  定义div的所有后代<br> $(“h2”).siblings().css  定义同胞（同级）元素<br>  $(“h2”).siblings(“p”)  同胞元素的所有p元素，前后相邻的兄弟节点：<br>  $(“h2”).next();   下一个同胞元素<br>  nextAll() 方法返回被选元素的所有跟随的同胞元素（就是他之下的元素）<br> $(“h2”).nextUntil(“h6”);返回介于h2与h6元素之间的所有同胞元素：<br> $(‘.item-3’).prev()  通过prev是匹配合集中每一个元素的上一个兄弟元素<br> $(“div p”).first().css 选取首个 div元素内部的第一个 p 元素<br> $(“div p”).last().css  选择最后一个div元素中的最后一个p元素：<br> $(“p”).eq(1).css(“background-color”,”yellow”);索引号从 0 开始，因此首个元素的索引号是 0 而不是 1。下面的例子选取第二个p元素（索引号 1）：<br> $(“p”).filter(“.intro”).css  不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回<br> $(“p”).not(“.intro”);返回不带有类名 “intro” 的所有p元素</p>
+</blockquote><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;> each  遍历
+  $(&quot;button:first&quot;).click(function() {
+        //遍历所有的li
+        //修改每个li内的字体颜色
+        $(&quot;li&quot;).each(function(index, element) {
+            $(this).css('color','red')
+        })
+
+    })
+    $(&quot;button:last&quot;).click(function() {
+        //遍历所有的li
+        //修改偶数li内的字体颜色
+        $(&quot;li&quot;).each(function(index, element) {
+            if (index % 2) {
+                $(this).css('color','blue')
+            }
+        })
+    })
+</code></pre>"> each  遍历
+  $(<span class="hljs-string">"button:first"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//遍历所有的li</span>
+        <span class="hljs-comment">//修改每个li内的字体颜色</span>
+        $(<span class="hljs-string">"li"</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(index, element)</span> </span>{
+            $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>)
+        })
+
+    })
+    $(<span class="hljs-string">"button:last"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//遍历所有的li</span>
+        <span class="hljs-comment">//修改偶数li内的字体颜色</span>
+        $(<span class="hljs-string">"li"</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(index, element)</span> </span>{
+            <span class="hljs-keyword">if</span> (index % <span class="hljs-number">2</span>) {
+                $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'blue'</span>)
+            }
+        })
+    })
+</code></pre><h2 id="jquery-ajax"><a name="jquery-ajax" href="#jquery-ajax"></a>JQuery  AJAX</h2><blockquote>
+<p>$(“#div1”).load(“demo_test.txt”);  把文件 “demo_test.txt” 的内容加载到指定的 </p><div> 元素中：<br>$(“#div1”).load(“/example/jquery/demo_test.txt #p1”);     把 “demo_test.txt” 文件中 id=”p1” 的元素的内容，加载到指定的 <div> 元素中：<p></p>
+</div></div></blockquote><p>jQuery get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据。</p><pre><code data-origin="<pre><code>GET - 从指定的资源请求数据
+POST - 向指定的资源提交要处理的数据
+</code></pre>">GET - 从指定的资源请求数据
+POST - 向指定的资源提交要处理的数据
+</code></pre><p>GET 基本上用于从服务器获得（取回）数据。注释：GET 方法可能返回缓存数据。<br>POST 也可用于从服务器获取数据。不过，POST 方法不会缓存数据，并且常用于连同请求一起发送数据。</p><p>GET语法：</p><p>$.get(URL,callback);</p><p>必需的 URL 参数规定您希望请求的 URL。</p><p>可选的 callback 参数是请求成功后所执行的函数名。</p><p>$.get() 方法从服务器上的一个文件中取回数据：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>$(document).ready(function(){
+  $(&quot;button&quot;).click(function(){
+    $.get(&quot;/example/jquery/demo_test.asp&quot;,function(data,status){
+      alert(&quot;数据：&quot; + data + &quot;\n状态：&quot; + status);
+    });
+  });
+});
+</code></pre>">$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+  $(<span class="hljs-string">"button"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    $.get(<span class="hljs-string">"/example/jquery/demo_test.asp"</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data,status)</span></span>{
+      alert(<span class="hljs-string">"数据："</span> + data + <span class="hljs-string">"\n状态："</span> + status);
+    });
+  });
+});
+</code></pre><blockquote>
+<p>这段代码是向页面发送 HTTP GET 请求，然后获得返回的结果</p>
+</blockquote><p>POST语法：</p><p>$.post(URL,data,callback);</p><p>必需的 URL 参数规定您希望请求的 URL。</p><p>可选的 data 参数规定连同请求发送的数据。</p><p>可选的 callback 参数是请求成功后所执行的函数名。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>$(document).ready(function(){
+  $(&quot;button&quot;).click(function(){
+    $.post(&quot;/example/jquery/demo_test_post.asp&quot;,
+    {
+      name:&quot;Donald Duck&quot;,
+      city:&quot;Duckburg&quot;
+    },
+    function(data,status){
+      alert(&quot;数据：&quot; + data + &quot;\n状态：&quot; + status);
+    });
+  });
+});
+</code></pre>">$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+  $(<span class="hljs-string">"button"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    $.post(<span class="hljs-string">"/example/jquery/demo_test_post.asp"</span>,
+    {
+      name:<span class="hljs-string">"Donald Duck"</span>,
+      city:<span class="hljs-string">"Duckburg"</span>
+    },
+    <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data,status)</span></span>{
+      alert(<span class="hljs-string">"数据："</span> + data + <span class="hljs-string">"\n状态："</span> + status);
+    });
+  });
+});
+</code></pre><blockquote>
+<p>向页面发送 HTTP POST 请求，并获得返回的结果</p>
+<pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>$.noConflict();
+jQuery(document).ready(function(){
+  jQuery(&quot;button&quot;).click(function(){
+    jQuery(&quot;p&quot;).text(&quot;jQuery 仍在运行！&quot;);
+  });
+});
+</code></pre>">$.noConflict();
+jQuery(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+  jQuery(<span class="hljs-string">"button"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    jQuery(<span class="hljs-string">"p"</span>).text(<span class="hljs-string">"jQuery 仍在运行！"</span>);
+  });
+});
+</code></pre>
+<p>noConflict() 方法会释放会 $ 标识符的控制，这样其他脚本就可以使用它了</p>
+<h2 id="选择器"><a name="选择器" href="#选择器"></a>选择器</h2>
+<p>$(“.div:first”) 找到第一个div<br>$(“.div:last”)  找到最后一个div<br>$(“.div:even”)  :even 选择所引值为偶数的元素，从 0 开始计数<br>$(“.div:odd”):odd 选择所引值为奇数的元素，从 0 开始计数<br>$(“.aaron:eq(2)”)  选择单个<br>$(“.aaron:gt(3)”)  :gt 选择匹配集合中所有索引值大于给定index参数的元素<br>$(“.aaron:lt(2)”) :lt 选择匹配集合中所有索引值小于给定index参数的元素  与:gt相反<br> $(“input:not(:checked) + p”)   选中所有紧接着没有checked属性的input元素后的p元素，赋予颜色</p>
+<h1 id="内容筛选选择器"><a name="内容筛选选择器" href="#内容筛选选择器"></a>内容筛选选择器</h1>
+<p> <img src="file:///home/fanyuan/%E6%A1%8C%E9%9D%A2/jQuery/images/4.jpg" alt="img"><br> :contains与:has都有查找的意思，但是contains查找包含“指定文本”的元素，has查找包含“指定元素”的元素</p>
+</blockquote><pre><code data-origin="<pre><code>     查找所有class='div'中DOM元素中包含&quot;contains&quot;的元素节点
+    //并且设置颜色
+    $(&quot;.div:contains(':contains')&quot;).css(&quot;color&quot;, &quot;#CD00CD&quot;);
+
+    //查找所有class='div'中DOM元素中包含&quot;span&quot;的元素节点
+    //并且设置颜色
+    $(&quot;.div:has(span)&quot;).css(&quot;color&quot;, &quot;blue&quot;);
+
+   //选择所有包含子元素或者文本的a元素
+   //增加一个蓝色的边框
+   $(&quot;a:parent&quot;).css(&quot;border&quot;, &quot;3px groove blue&quot;);
+
+
+
+   //找到a元素下面的所有空节点(没有子元素)
+   //增加一段文本与边框
+   $(&quot;a:empty&quot;).text(&quot;:empty&quot;).css(&quot;border&quot;, &quot;3px groove red&quot;); 
+</code></pre>">     查找所有class='div'中DOM元素中包含"contains"的元素节点
+    //并且设置颜色
+    $(".div:contains(':contains')").css("color", "#CD00CD");
+
+    //查找所有class='div'中DOM元素中包含"span"的元素节点
+    //并且设置颜色
+    $(".div:has(span)").css("color", "blue");
+
+   //选择所有包含子元素或者文本的a元素
+   //增加一个蓝色的边框
+   $("a:parent").css("border", "3px groove blue");
+
+
+
+   //找到a元素下面的所有空节点(没有子元素)
+   //增加一段文本与边框
+   $("a:empty").text(":empty").css("border", "3px groove red"); 
+</code></pre><p><img src="file:///home/fanyuan/%E6%A1%8C%E9%9D%A2/jQuery/images/5.jpg" alt=""><br><img src="file:///home/fanyuan/%E6%A1%8C%E9%9D%A2/jQuery/images/1.jpg" alt=""></p><h3 id="子元素筛选选择器"><a name="子元素筛选选择器" href="#子元素筛选选择器"></a>子元素筛选选择器</h3><p><img src="file:///home/fanyuan/%E6%A1%8C%E9%9D%A2/jQuery/images/2.jpg" alt=""></p><h3 id="表单元素选择器"><a name="表单元素选择器" href="#表单元素选择器"></a>表单元素选择器</h3><p><img src="file:///home/fanyuan/%E6%A1%8C%E9%9D%A2/jQuery/images/3.jpg" alt=""></p><h3 id="this加工成jquery对象"><a name="this加工成jquery对象" href="#this加工成jquery对象"></a>this加工成jQuery对象</h3><blockquote>
+<p>this，表示当前的上下文对象是一个html对象，可以调用html对象所拥有的属性和方法。<br>$(this),代表的上下文对象是一个jquery的上下文对象，可以调用jQuery的方法和属性值。</p>
+<pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>$('#test2').click(function(){
+            //通过包装成jQuery对象改变颜色
+            $(this).css('color','blue')
+})；
+</code></pre>">$(<span class="hljs-string">'#test2'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+            <span class="hljs-comment">//通过包装成jQuery对象改变颜色</span>
+            $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">'color'</span>,<span class="hljs-string">'blue'</span>)
+})；
+</code></pre>
+<h2 id="元素的数据存储"><a name="元素的数据存储" href="#元素的数据存储"></a>元素的数据存储</h2>
+<pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>$('.left').click(function() {
+        var ele = $(this);
+        //通过$.data方式设置数据
+        $.data(ele, &quot;a&quot;, &quot;data test&quot;)
+        $.data(ele, &quot;b&quot;, {
+            name : &quot;慕课网&quot;
+        })
+        //通过$.data方式取出数据
+        var reset = $.data(ele, &quot;a&quot;) + &quot;&amp;lt;/br&amp;gt;&quot; + $.data(ele, &quot;b&quot;).name;
+        ele.find('span').append(reset);
+    })
+</code></pre>">$(<span class="hljs-string">'.left'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">var</span> ele = $(<span class="hljs-keyword">this</span>);
+        <span class="hljs-comment">//通过$.data方式设置数据</span>
+        $.data(ele, <span class="hljs-string">"a"</span>, <span class="hljs-string">"data test"</span>)
+        $.data(ele, <span class="hljs-string">"b"</span>, {
+            name : <span class="hljs-string">"慕课网"</span>
+        })
+        <span class="hljs-comment">//通过$.data方式取出数据</span>
+        <span class="hljs-keyword">var</span> reset = $.data(ele, <span class="hljs-string">"a"</span>) + <span class="hljs-string">"&lt;/br&gt;"</span> + $.data(ele, <span class="hljs-string">"b"</span>).name;
+        ele.find(<span class="hljs-string">'span'</span>).append(reset);
+    })
+</code></pre>
+</blockquote>
+
+<footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
+</body>
+</html>
