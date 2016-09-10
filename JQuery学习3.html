@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery.js"></script>
+<style>
+.box{
+	 border: 1px solid #ccc;
+    background-color: #eeeeee;
+    width: 200px;height: 200px;
+    float: left;
+    padding: 3px 3px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#a3{
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	display: none;
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <h4>测试一</h4>
+        <div id="a2">hide动画操作</div>
+        <button>hide带动画</button>
+        <script type="text/javascript">
+        //点击buttom2 执行动画隐藏
+        $("button:last").click(function() {
+            $("#a2").hide({
+                duration: 3000,
+                complete: function() {
+                    alert('执行3000ms动画完毕')
+                }
+            }).show(3000);
+        });
+        </script>
+ </div>
+
+  <div class="box">
+  	 <h4>测试二</h4>
+        <div id="a3">hide-show</div>
+        <button  id="slide">点击slideDown执行回调</button>
+        <script>
+        //点击buttom
+        //执行3秒隐藏
+        //执行3秒显示
+        $("#slide").click(function() {
+            $("#a3").slideDown(3000,function(){
+                alert('动画执行结束')
+            })
+        });
+        </script>
+  </div>
+<div class="box">
+	 <h2>trim方法</h2>
+
+    未处理
+    <input type="text" name="" id="results1" value=" 前后留空 " />
+    <input id="exec1" type="button" value="点击执行"> <br />
+    
+    trim处理
+    <input type="text" name="" id="results2" value=" 前后留空 " />
+    <input id="exec2" type="button" value="点击执行">
+    <script type="text/javascript">
+    $("#exec1").click(function() {
+        alert("值的长度：" + $("#results1").val().length)
+    });
+
+    $("#exec2").click(function() {
+         alert("值的长度：" + $.trim($("#results2").val()).length)
+    });
+    </script>
+</div>
+
+<div class="box">
+	   <h2>index方法</h2>
+    <ul>
+        <a></a>
+        <a></a>
+        <li id="test1">1</li>
+        <li id="test2">2</li>
+        <li id="test3">3</li>
+    </ul>
+    <ul>
+        <li id="test4">4</li>
+        <li id="test5">5</li>
+        <li id="test6">6</li>
+    </ul>
+    <select id="animation">
+        <option value="1">index无参数</option>
+        <option value="2">index传递dom</option>
+        <option value="3">index传递jQuery对象</option>
+    </select>
+    <input id="exec" type="button" value="点击执行">
+    <br />
+    <br /> 索引结果：
+    <span></span>
+    <script type="text/javascript">
+    $("#exec").click(function() {
+        var v = $("#animation").val();
+
+        var $span = $("span");
+        $span.empty();
+
+        if (v == "1") {
+            //找到第一个li的同辈节点中的索引位置
+            $span.text($("li").index())
+        } else if (v == "2") {
+
+            //通过传递dom查找
+            $span.text($("li").index(document.getElementById("test5")))
+
+        } else if (v == "3") {
+            //通过传递jQuery对象查找
+            $span.text($("li").index($("#test6")))
+
+        }
+    });
+    </script>
+</div>
+
+div class="box">
+生成新DOM节点
+    <script>
+    var $body = $('body');
+    $body.on('click', function() {//$body.click(function(){})
+        //通过jQuery生成div元素节点
+        var div = $("<div class='right'><div class='aaron'>动态创建DIV元素节点</div></div>")
+        $body.append(div)
+    })
+
+    </script>
+    <button>建立新节点</button>
+</div>
+
+<div class="box">
+    <p>P元素1，默认给绑定一个点击事件</p>
+    <p>P元素2，默认给绑定一个点击事件</p>
+    <button id="bt1">点击删除 p 元素</button>
+    <button id="bt2">点击移动 p 元素</button>
+    <script type="text/javascript">
+    $('p').click(function(e) {
+        alert(e.target.innerHTML)
+    })
+    var p;
+    $("#bt1").click(function() {
+        if (!$("p").length) return; //去重
+        //通过detach方法删除元素
+        //只是页面不可见，但是这个节点还是保存在内存中
+        //数据与事件都不会丢失
+        p = $("p").detach()
+    });
+
+    $("#bt2").click(function() {
+        //把p元素在添加到页面中
+        //事件还是存在
+        $("body").append(p);
+    });
+    </script>
+</div>
+
+<div class="box">
+<style>
+    .left div,
+    .right div {
+        width: 100px;
+        padding: 5px;
+        margin: 5px;
+        float: left;
+        border: 1px solid #ccc;
+        background: #bbffaa;
+    }
+    .right div {
+        background: yellow;
+    }
+    p {
+        border: 1px solid red;
+    }
+    a {
+        border: 1px solid blue;
+    }
+    </style>
+
+    <h2>DOM包裹wrap()方法</h2>
+    <div class="left">
+        <button class="aaron1">点击,通过wrap方法给p元素增加父容器div</button>
+        <button class="aaron2">点击,通过wrap的回调方法给a元素增加父容器div</div>
+
+    <div class="right">
+        <p>p元素</p>
+        <p>p元素</p>
+    </div>
+    <div class="left">
+        <a>a元素</a>
+        <a>a元素</a>
+    </div>
+    <script type="text/javascript">
+    $(".aaron1").on('click', function() {
+        //给所有p元素，增加父容器div
+        $('p').wrap('<div></div>')
+    })
+    </script>
+    <script type="text/javascript">
+    $(".aaron2").on('click', function() {
+        $('a').wrap(function() {
+            return '<div class="' + $(this).text() + '" />';
+        })
+    })
+    </script>
+</div>
+</body>
+</html>
